@@ -119,13 +119,38 @@ return Response::json($model->getErrors());
 
 ```
 
+### Inline Validators
+
+validator can be defined in the class and will be automatically 
+
+```php
+use Yangmls\ValidationTrait;
+
+class User extends Eloquent
+{
+    use ValidationTrait;
+
+    protected function validatorEmail($value, $input, $options)
+    {
+        // $value is attribute value
+        // $input is whole input
+        // $options is the config you pass to saveFromRequest
+        
+        // Note: 
+        // 1. you must use addError to stop saving
+        // 2. you must return true if you think the validator is passed
+    }
+}
+
+```
+
 ### Built-in hooks
 
 below methods are called automatically when you do validating or saving
 
 `beforeSave`, `afterSave`, `beforeValidate`, `afterValidate`
 
-however you can use laravel built-in events to do this too
+however you can also use laravel built-in events for saving/creating/updating
 
 ### License
 
