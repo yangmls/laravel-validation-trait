@@ -8,7 +8,6 @@ Provide a powerful trait for laravel 4 model
 create a model and use it
 
 ```php
-
 use Yangmls\ValidationTrait;
 
 class User extends Eloquent
@@ -42,7 +41,6 @@ class User extends Eloquent
 create a new model and save
 
 ```php
-
 $model = new User();
 $result = $model->saveFromRequest(Input::all()); // true or false
 return Response::json($model->getErrors());
@@ -52,7 +50,6 @@ return Response::json($model->getErrors());
 create a new model without errors
 
 ```php
-
 $model = User::createFromRequest(Input::all()); // User instance or null
 
 ```
@@ -60,7 +57,6 @@ $model = User::createFromRequest(Input::all()); // User instance or null
 save a existing model
 
 ```php
-
 $model = User::find(1);
 $result = $model->saveFromRequest(Input::all()); // true or false
 return Response::json($model->getErrors());
@@ -72,7 +68,6 @@ return Response::json($model->getErrors());
 sometimes you may process a form without Eloquent, you can do like this
 
 ```php
-
 use Yangmls\ValidationTrait;
 
 class Login
@@ -118,7 +113,6 @@ class Login
 then call it in controller
 
 ```php
-
 $model = new Login(Input::all());
 $result = $model->validate(); // true or false
 return Response::json($model->getErrors());
