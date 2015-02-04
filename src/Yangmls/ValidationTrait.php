@@ -100,7 +100,7 @@ trait ValidationTrait
         if(!empty($rules)) {
             $validation = Validator::make($input, $rules, $ruleMessages, $customAttributes);
             $this->getErrors(true)->merge($validation);
-            foreach(array_keys($keys) as $key) {
+            foreach(array_keys($rules) as $key) {
                 if(!$validation->errors()->has($key)) {
                     $keys[] = $key;
                 }
