@@ -9,8 +9,15 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=5.4.0"
+    },
     "require-dev": {
         "laravel/framework": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Yangmls": "src"
+        }
     }
 }

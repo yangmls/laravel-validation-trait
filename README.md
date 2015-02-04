@@ -126,3 +126,7 @@ below methods are called automatically when you do validating or saving
 `beforeSave`, `afterSave`, `beforeValidate`, `afterValidate`
 
 however you can use laravel built-in events to do this too
+
+### License
+
+under the [MIT license](http://opensource.org/licenses/MIT)
