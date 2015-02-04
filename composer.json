@@ -1,0 +1,16 @@
+{
+    "name": "yangmls/laravel-validation-trait",
+    "description": "Provide a powerful trait for saving model easily",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clive Young",
+            "email": "yang.clive@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "laravel/framework": "4.2.*"
+    }
+}
