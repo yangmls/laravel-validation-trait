@@ -121,7 +121,7 @@ return Response::json($model->getErrors());
 
 ### Inline Validators
 
-validator can be defined in the class and will be automatically 
+validator can be defined in the class and will be called automatically 
 
 ```php
 use Yangmls\ValidationTrait;
