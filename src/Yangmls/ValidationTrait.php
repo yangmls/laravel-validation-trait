@@ -127,7 +127,9 @@ trait ValidationTrait
         $input = array_only($input, $fillable);
         
         if(method_exists($this, 'afterValidate')) {
-            $this->afterValidate($input, $options);
+            if($this->afterValidate($input, $options) === false) {
+                return false;
+            }
         }
         
         return true;
