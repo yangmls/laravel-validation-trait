@@ -21,7 +21,7 @@ class User extends Eloquent
         ];
     }
 
-    public function rulesMessages()
+    public function ruleMessages()
     {
         return [
             'email.required' => ':attribute is required',
@@ -93,7 +93,7 @@ class Login
         ];
     }
 
-    public function rulesMessages()
+    public function ruleMessages()
     {
         return [
             'email.required' => ':attribute is required',
